@@ -18,11 +18,10 @@
             <div class="pull-left">
                 <h2>Laravel 8 Ajax CRUD DataTables </h2>
                 <div class="col-lg-12 margin-tb" style="margin-left: 80%;">
-                    {{ Auth::user()->name }}
+                   <h2> {{ Auth::user()->name }} </h2>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-
-                        <x-jet-dropdown-link   href="{{ route('logout') }}"
+                        <x-jet-dropdown-link  class="delete btn btn-danger"  href="{{ route('logout') }}"
                                              onclick="event.preventDefault();
                                                                 this.closest('form').submit();">
                             {{ __('Logout') }}
